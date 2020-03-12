@@ -1,0 +1,23 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.lineBox {
+  border: 1px solid black;
+
+
+}
+
+.Hero {
+  .hero-body {
+    background-image: url('https://cdn.londonandpartners.com/visit/general-london/areas/62997-640x360-tube-sign.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .h1 {
+      color: red;
+      font-style: italic;
+    }
+  }
+}
