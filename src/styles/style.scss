@@ -1,12 +1,14 @@
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 .lineBox {
   border: 1px solid black;
+}
 
-
+.search {
+  margin: 15px 5px;
 }
 
 .Hero {
@@ -21,3 +23,26 @@
     }
   }
 }
+
+$color-yellow: #ffd539;
+$color-grey: #efefef;
+
+// .StationsIndex {
+// 	.card {
+// 		display: flex;
+// 		flex-direction: column;
+// 		height: 100%;
+// 	}
+// 	.card-header {
+// 		background-color: lighten(#ffd539, 10%);
+// 	}
+// 	.card-image img {
+// 		width: auto;
+// 		height: 300px;
+// 		margin: 0 auto;
+// 		padding: 40px 20px;
+// 	}
+// 	.card-content {
+// 		border-top: 1px solid $color-grey;
+// 	}
+// }

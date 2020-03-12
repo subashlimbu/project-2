@@ -23,22 +23,38 @@ export default class SataionArrival extends React.Component {
 
   render() {
     if (!this.state.arrivalsInformation) return <p>Waiting for Data</p>
+
     console.log(this.state.arrivalsInformation)
+    const platformNames = []
+    this.state.arrivalsInformation.map((arrival) => {
+      if (!platformNames.includes(arrival.platformName)) {
+        platformNames.push(arrival.platformName)
+      }
+    })
+
     return <section className="arrivalInformation">
       <div className="container">
         <div className="columns is-centered is-multiline is-mobile">
+          {/* <div className="column is-half has-text-centered"> */}
+          {platformNames.map((platform, index) => {
+            return <div key={index} className="column is-one-quarter has-text-centered" >
+              <p>{platform}</p>
+              {this.state.arrivalsInformation.map(arrival => {
+                if (arrival.platformName === platform) {
+                  return <div className="column">
+
+                    <p>{arrival.destinationName}</p>
+                    <p>{arrival.timeToStation}</p>
 
 
-          <div className="column is-half has-text-centered">
-            {this.state.arrivalsInformation.map((arrival, index) => {
-              return <>
-                  <p key={index}> {arrival.destinationName} </p>
-                  <p> {arrival.platformName}</p>
-                <p>Time To Station: {arrival.timeToStation} Seconds</p>
-              </>
-            })}
-          </div>
+                  </div>
+                }
+              })}
+            </div>
+          })}
+
         </div>
+        {/* </div> */}
 
       </div>
     </section>

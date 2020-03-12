@@ -1,32 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-
-const StationCard = ({ commonName }) => {
-  return <div className='column is-half-desktop is-half-tablet'>
+const StationCard = ({ commonName, id, handleClick }) => {
+  return <div className='column is-two-quarter'>
+    <Link to={`/stations/${id}`}></Link>
     <div className="card">
-      <div className="card-header">
-        <h4 className="card-title">{commonName}</h4>
-      </div>
-
-      <div className='card-content'>
-        <h4 > Arrivals: </h4>
-
-
-          return <div className='ArrivalBox'>
-          <h5>Train Destination: <br></br>Hello</h5>
+      <div className="card-content">
+        <div className="title">
+          <h4 className="card-title">{commonName}</h4>
         </div>
-
-        <small>     
-
-        </small>
-
-
+        <div className="subtitle">
+          Fetching..
+        </div>
       </div>
+      <footer className="card-footer">
+        <div className='button'><Link to={`/stations/${id}`}>Arrivals:</Link></div>
+       
+        <div className="button" onClick={() => handleClick()}>Station Information</div>
+    
+      </footer>
     </div>
   </div>
 }
-
 export default StationCard
-
-
 
