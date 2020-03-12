@@ -4,6 +4,8 @@ import StationCard from './StationCard'
 import SearchBar from './common/SearchBar'
 import StationInformation from './common/StationInformation'
 
+import LoaderSpinner from './common/LoaderSpinner'
+
 
 export default class LineStations extends React.Component {
 
@@ -59,7 +61,7 @@ export default class LineStations extends React.Component {
 
   render() {
     console.log(this.state.lineStations)
-    if (!this.state.lineStations) return <p>Waiting for Data</p>
+    if (!this.state.lineStations) return <LoaderSpinner />
     return <section className="stationsIndex">
       <div className="section">
         <SearchBar query={this.state.query} onChange={() => this.filterTheStations(event)} />

@@ -64,7 +64,7 @@ export default class TubeLines extends React.Component {
       <div className="container">
         <div className="columns is-centered is-multiline is-mobile">
 
-          <div className="column is-half has-text-centered">
+          <div className="column is-two-thirds has-text-centered">
             {this.state.filteredLines.map((line, index) => {
               return <div key={index} className='lineBox' style={{ backgroundColor: hexForTubeLines[line.name] }}>
                 <Link to={`/linestations/${line.id}`}>

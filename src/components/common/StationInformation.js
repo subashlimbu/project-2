@@ -7,7 +7,7 @@ const StationInformation = ({ station,  toggleModal }) => {
       {/* <p>{station.commonName}</p> */}
       {station.additionalProperties.map(property => {
         return <>
-        <div className="column is-half is-centered is-multiline">{property.key}</div>
+        {(!(property.category === 'NearestPlaces')) && <div className="column is-half is-centered is-multiline"> {property.key}</div>}
         </>
       })}
     </div>

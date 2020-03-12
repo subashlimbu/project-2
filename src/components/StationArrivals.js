@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import LoaderSpinner from './common/LoaderSpinner'
+import ArrivalCard from './ArrivalCard'
 
 
 export default class SataionArrival extends React.Component {
@@ -19,10 +21,15 @@ export default class SataionArrival extends React.Component {
       .catch(err => console.error(err))
 
   }
+  sortArrivalsInformation(info) {
+    info.sort(function (a, b) {
+      return parseInt(a.timeToStation) - parseInt(b.timeToStation)
+    })
+  }
 
 
   render() {
-    if (!this.state.arrivalsInformation) return <p>Waiting for Data</p>
+    if (!this.state.arrivalsInformation) return <LoaderSpinner />
 
     console.log(this.state.arrivalsInformation)
     const platformNames = []
@@ -37,14 +44,14 @@ export default class SataionArrival extends React.Component {
         <div className="columns is-centered is-multiline is-mobile">
           {/* <div className="column is-half has-text-centered"> */}
           {platformNames.map((platform, index) => {
-            return <div key={index} className="column is-one-quarter has-text-centered" >
-              <p>{platform}</p>
-              {this.state.arrivalsInformation.map(arrival => {
+            return <div key={index} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile has-text-centered" >
+              <h2 className='title'>{platform}</h2>
+              {this.state.arrivalsInformation.map((arrival, index) => {
+                console.log(arrival)
                 if (arrival.platformName === platform) {
                   return <div className="column">
 
-                    <p>{arrival.destinationName}</p>
-                    <p>{arrival.timeToStation}</p>
+                    <ArrivalCard key={index} {...arrival} />
 
 
                   </div>

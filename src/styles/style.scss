@@ -1,48 +1,79 @@
 
-// * {
-//   box-sizing: border-box;
-// }
-
-.lineBox {
-  border: 1px solid black;
+* {
+  box-sizing: border-box;
 }
 
 .search {
-  margin: 15px 5px;
+  margin: 0 0 10px 0
 }
 
+.arrivalBox {
+  border: 1px solid grey
+}
+
+.section {
+  background-image: url('https://hdwallpaperim.com/wp-content/uploads/2017/08/25/132339-metro-underground-748x468.jpg');
+  background-color: wheat;
+  background-size: cover;
+}
+.lineBox {
+  border: 1px solid black;
+  border-style: ridge;
+  background-color: whitesmoke;
+ 
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: brown;
+    font-weight: bold;;
+  }
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: burlywood;
+  }
+}
 .Hero {
   .hero-body {
     background-image: url('https://cdn.londonandpartners.com/visit/general-london/areas/62997-640x360-tube-sign.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    .h1 {
-      color: red;
+    h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: brown;
       font-style: italic;
+    }
+    h2 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: x-large;
     }
   }
 }
+.modal-content {
+  flex-direction: column;
+  background-color: wheat;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: bold;
+  height: 200px;
+}
 
-$color-yellow: #ffd539;
-$color-grey: #efefef;
+.button {
+  background-color: grey;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-// .StationsIndex {
-// 	.card {
-// 		display: flex;
-// 		flex-direction: column;
-// 		height: 100%;
-// 	}
-// 	.card-header {
-// 		background-color: lighten(#ffd539, 10%);
-// 	}
-// 	.card-image img {
-// 		width: auto;
-// 		height: 300px;
-// 		margin: 0 auto;
-// 		padding: 40px 20px;
-// 	}
-// 	.card-content {
-// 		border-top: 1px solid $color-grey;
-// 	}
-// }
+}
+.card {
+  background-color: paleturquoise;
+  h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkslategrey;
+  }
+  .card-content {
+    height: 220px;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+}
