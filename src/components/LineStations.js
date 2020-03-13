@@ -60,6 +60,7 @@ export default class LineStations extends React.Component {
 
 
   render() {
+    const lineId = this.props.match.params.linename
     console.log(this.state.lineStations)
     if (!this.state.lineStations) return <LoaderSpinner />
     return <section className="stationsIndex">
@@ -68,7 +69,7 @@ export default class LineStations extends React.Component {
         <div className="container">
           <div className="columns is-multiline is-mobile">
             {this.state.filteredStations.map((station, index) => {
-              return <StationCard key={index} {...station} handleClick={() => this.handleClick(station)}>
+              return <StationCard key={index} {...station} lineId={lineId} handleClick={() => this.handleClick(station)}>
               </StationCard>
             })}
           </div>

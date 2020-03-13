@@ -32,7 +32,7 @@ export default class TubeLines extends React.Component {
 
   componentDidMount() {
     axios.get('https://api.tfl.gov.uk/Line/Mode/tube/Status?detail=true')
-      .then(res => this.setState({ 
+      .then(res => this.setState({
         lineData: res.data,
         filteredLines: res.data
       }))
@@ -66,12 +66,15 @@ export default class TubeLines extends React.Component {
 
           <div className="column is-two-thirds has-text-centered">
             {this.state.filteredLines.map((line, index) => {
-              return <div key={index} className='lineBox' style={{ backgroundColor: hexForTubeLines[line.name] }}>
-                <Link to={`/linestations/${line.id}`}>
-                  <h2 className="lineName">{line.name}</h2>
-                  <p className="lineStatus">{line.lineStatuses[0].statusSeverityDescription}</p>
-                </Link>
-              </div>
+              return <Link
+                key={index}
+                className='lineBox'
+                to={`/linestations/${line.id}`}
+                style={{ backgroundColor: hexForTubeLines[line.name] }}>
+                <h2 className="lineName">{line.name}</h2>
+                <p className="lineStatus">{line.lineStatuses[0].statusSeverityDescription}</p>
+              </Link>
+
             })}
           </div>
         </div>

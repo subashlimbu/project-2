@@ -8,7 +8,19 @@
 }
 
 .arrivalBox {
-  border: 1px solid grey
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.arrivalInformation{
+  margin-top: 20px;
+}
+
+.departureDisplay {
+  border: 1px solid grey;
+  // margin: 5px
 }
 
 .section {
@@ -69,11 +81,55 @@
     color: darkslategrey;
   }
   .card-content {
-    height: 220px;
+    height: 150px;
   }
 }
 
 .card-footer {
   display: flex;
   justify-content: space-around;
+}
+
+.myLink {
+  text-decoration: none;
+  color: black;
+}
+
+.lineBox {
+  display: flex;
+  justify-content: unset;
+  // border: 1px solid black;
+  border-style: ridge;
+  background-color: whitesmoke;
+  justify-content: space-around;
+  h2 {
+    // display: flex;
+    display: inline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+    justify-content: space-between;
+    color: darkslategray;
+    font-weight: bold;;
+    flex-wrap: wrap;
+  }
+  .lineName{
+    align-self: flex-start;
+    text-align: left;
+    margin: 0;
+  }
+  .lineStatus{
+    justify-self: flex-end;
+    // align-self: flex-end;
+    padding-right: 0;
+    margin-right: 10px;
+    text-align: right;
+  }
+  // p {
+  //   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  //   color: burlywood;
+  // }
+}
+
+body {
+  line-height: 3.5;
 }

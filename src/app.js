@@ -20,7 +20,7 @@ const App = () => (
     <Hero />
 
     <Switch>
-      <Route path="/stations/:id" component={StationArrivals} />
+      <Route exact path="/stations/:line/:id" component={StationArrivals} />
       <Route exact path="/" component={TubeLines} />
       <Route exact path="/linestations/:linename" component={LineStations} />
 

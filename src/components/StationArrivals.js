@@ -4,7 +4,7 @@ import LoaderSpinner from './common/LoaderSpinner'
 import ArrivalCard from './ArrivalCard'
 
 
-export default class SataionArrival extends React.Component {
+export default class SataionArrivals extends React.Component {
 
   constructor() {
     super()
@@ -15,10 +15,13 @@ export default class SataionArrival extends React.Component {
 
 
   componentDidMount() {
+
     const id = this.props.match.params.id
-    axios.get(`https://api.tfl.gov.uk/StopPoint/${id}/arrivals`)
+    const line = this.props.match.params.line
+    axios.get(`https://api.tfl.gov.uk/Line/${line}/Arrivals/${id}`)
       .then(res => this.setState({ arrivalsInformation: res.data }))
       .catch(err => console.error(err))
+    console.log('Hello')
 
   }
   sortArrivalsInformation(info) {
@@ -32,39 +35,49 @@ export default class SataionArrival extends React.Component {
     if (!this.state.arrivalsInformation) return <LoaderSpinner />
 
     console.log(this.state.arrivalsInformation)
-    const platformNames = []
+    const trains = []
     this.state.arrivalsInformation.map((arrival) => {
-      if (!platformNames.includes(arrival.platformName)) {
-        platformNames.push(arrival.platformName)
+
+      if (!trains.includes(arrival.destinationName)) {
+        trains.push(arrival.destinationName)
       }
     })
+    const line = this.props.match.params.line
+
 
     return <section className="arrivalInformation">
       <div className="container">
+        <h1 className='title'>{this.state.arrivalsInformation[0].lineName} Line</h1>
+        <h1 className='subtitle'>{this.state.arrivalsInformation[0].stationName}</h1>
         <div className="columns is-centered is-multiline is-mobile">
-          {/* <div className="column is-half has-text-centered"> */}
-          {platformNames.map((platform, index) => {
-            return <div key={index} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile has-text-centered" >
-              <h2 className='title'>{platform}</h2>
+          {trains.map((train, index) => {
+            return <div key={index} className="column is-half has-text-centered departureDisplay" >
+              <h1 className='subtitle'>Destination: {train}</h1>
               {this.state.arrivalsInformation.map((arrival, index) => {
                 console.log(arrival)
-                if (arrival.platformName === platform) {
+                if (arrival.destinationName === train) {
                   return <div className="column">
+
 
                     <ArrivalCard key={index} {...arrival} />
 
 
                   </div>
                 }
-              })}
+              })
+              }
             </div>
+
+
+
+
           })}
 
         </div>
-        {/* </div> */}
 
-      </div>
-    </section>
+
+      </div >
+    </section >
   }
 
 
