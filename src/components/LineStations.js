@@ -29,7 +29,29 @@ export default class LineStations extends React.Component {
       })
       )
       .catch(err => console.error(err))
+
+    this.updataData()
   }
+
+
+  updataData() {
+
+    setInterval(() => {
+      const lineId = this.props.match.params.linename
+      axios.get(`https://api.tfl.gov.uk/Line/${lineId}/StopPoints?tflOperatedNationalRailStationsOnly=false`)
+        .then(res => this.setState({
+          lineStations: res.data,
+          filteredStations: res.data
+        })
+        )
+        .catch(err => console.error(err))
+    }, 20000)
+
+
+
+
+  }
+
 
   filterTheStations(event) {
     console.log(event.target.value)

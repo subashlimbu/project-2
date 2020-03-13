@@ -4,8 +4,9 @@ const ArrivalCard = (arrival) => {
 
   return <div className="arrivalBox">
    
-    <p>Arriving in: {Math.floor(parseInt(arrival.timeToStation) / 60)} minutes</p>
-    <p>{arrival.platformName}</p>
+    <p className='dest'> <span className='destSpan'>{arrival.destinationName}</span></p>
+    <p className='time'>: {Math.floor(parseInt(arrival.timeToStation) / 60)} minutes</p>
+    
   </div>
 }
 

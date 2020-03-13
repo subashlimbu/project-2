@@ -11,10 +11,6 @@ import StationArrivals from './components/StationArrivals'
 import Hero from './components/common/Hero'
 
 
-
-
-
-
 const App = () => (
   <BrowserRouter>
     <Hero />
@@ -31,13 +27,6 @@ const App = () => (
 
 
 )
-
-
-
-
-
-
-
 
 ReactDOM.render(
   <App />,

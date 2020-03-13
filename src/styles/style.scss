@@ -3,98 +3,15 @@
   box-sizing: border-box;
 }
 
-.search {
-  margin: 0 0 10px 0
-}
-
-.arrivalBox {
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.arrivalInformation{
-  margin-top: 20px;
-}
-
-.departureDisplay {
-  border: 1px solid grey;
-  // margin: 5px
-}
 
 .section {
   background-image: url('https://hdwallpaperim.com/wp-content/uploads/2017/08/25/132339-metro-underground-748x468.jpg');
   background-color: wheat;
   background-size: cover;
 }
-.lineBox {
-  border: 1px solid black;
-  border-style: ridge;
-  background-color: whitesmoke;
- 
-  h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: brown;
-    font-weight: bold;;
-  }
-  p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: burlywood;
-  }
+.search {
+  margin: 0 0 10px 0;
 }
-.Hero {
-  .hero-body {
-    background-image: url('https://cdn.londonandpartners.com/visit/general-london/areas/62997-640x360-tube-sign.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    h1 {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      color: brown;
-      font-style: italic;
-    }
-    h2 {
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: x-large;
-    }
-  }
-}
-.modal-content {
-  flex-direction: column;
-  background-color: wheat;
-  font-family: 'Courier New', Courier, monospace;
-  font-style: italic;
-  font-weight: bold;
-  height: 200px;
-}
-
-.button {
-  background-color: grey;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-.card {
-  background-color: paleturquoise;
-  h4 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: darkslategrey;
-  }
-  .card-content {
-    height: 150px;
-  }
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-around;
-}
-
-.myLink {
-  text-decoration: none;
-  color: black;
-}
-
 .lineBox {
   display: flex;
   justify-content: unset;
@@ -102,6 +19,7 @@
   border-style: ridge;
   background-color: whitesmoke;
   justify-content: space-around;
+  line-height: 3.5;
   h2 {
     // display: flex;
     display: inline;
@@ -129,7 +47,85 @@
   //   color: burlywood;
   // }
 }
+  // .lineName {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   // font-family: Verdana, Geneva, Tahoma, sans-serif;
+  // }
+.Hero {
+  .hero-body {
+    background-image: url('https://cdn.londonandpartners.com/visit/general-london/areas/62997-640x360-tube-sign.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: brown;
+      font-style: italic;
+    }
+    h2 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: x-large;
+    }
+  }
+}
+.modal-content {
+  flex-direction: column;
+  background-color: wheat;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: bold;
+  height: 200px;
+}
+.button {
+  background-color: grey;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card {
+  background-color: paleturquoise;
+  h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkslategrey;
+  }
+  .card-content {
+    height: 150px;
+  }
+}
+.column.is-two-quarter {
+  flex: 0;
+}
 
-body {
-  line-height: 3.5;
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+.myLink {
+  color: black;
+  text-decoration: none;
+}
+.lineName{
+  float: left;
+}
+
+.departureDisplay {
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(245, 236, 236);
+}
+
+.arrivalBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(209, 189, 189)
+}
+
+.destSpan {
+  font-size: 20px;
+
+}
+
+.time {
+  color: green;
 }
