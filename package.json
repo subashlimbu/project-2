@@ -4,10 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack-dev-server --mode=development",
-    "build": "webpack -p",
-    "deploy": "npm run build && gh-pages -d dist"
+    "serve": "webpack-dev-server —mode-development",
+    "build": "webpack -p"
   },
   "author": "",
   "license": "ISC",
