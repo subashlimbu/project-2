@@ -374,6 +374,10 @@ export default StationInformation
 ## Wins 
 - My first experience of Pair programming is something I particularly enjoyed. The spirit of collaboration and comporomise made this a really fun project to work on and I'm proud of the finished product given that it was our first time-limited 'hackathon'. 
 
+## Key learnings
+- First experience of Pair Programming.
+- How to successfully update the state with setState and also update the lifecycle of the component using componentDidUpdate()
+- Pass props between React Components.
 
 ## Potential future features
 - Due to the time constraints, the CSS design is plain. I would work on the designing part as a futute feature. 
