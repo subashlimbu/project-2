@@ -12,7 +12,7 @@ import Hero from './components/common/Hero'
 
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="project-2">
     <Hero />
 
     <Switch>
