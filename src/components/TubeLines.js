@@ -19,7 +19,7 @@ const hexForTubeLines = {
 }
 
 
-export default class TubeLines extends React.Component {
+class TubeLines extends React.Component {
 
   constructor() {
     super()
@@ -84,3 +84,4 @@ export default class TubeLines extends React.Component {
   }
 
 }
+export default TubeLines

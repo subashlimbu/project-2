@@ -7,7 +7,7 @@ import StationInformation from './common/StationInformation'
 import LoaderSpinner from './common/LoaderSpinner'
 
 
-export default class LineStations extends React.Component {
+class LineStations extends React.Component {
 
   constructor() {
     super()
@@ -101,3 +101,4 @@ export default class LineStations extends React.Component {
     </section>
   }
 }
+export default LineStations

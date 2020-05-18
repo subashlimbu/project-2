@@ -4,7 +4,7 @@ import LoaderSpinner from './common/LoaderSpinner'
 import ArrivalCard from './ArrivalCard'
 
 
-export default class SataionArrivals extends React.Component {
+class SataionArrivals extends React.Component {
 
   constructor() {
     super()
@@ -110,9 +110,5 @@ export default class SataionArrivals extends React.Component {
       </div >
     </section >
   }
-
-
-
-
-
 }
+export default SataionArrivals
