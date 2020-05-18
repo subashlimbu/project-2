@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "serve": "webpack-dev-server —-mode=development",
+    "serve": "webpack-dev-server —-mode-development",
     "build": "webpack -p"
   },
   "author": "",
